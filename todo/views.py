@@ -25,7 +25,7 @@ def mark_as_undone(request, id):
 def edit_task(request, id):
     get_task = Task.objects.get(id=id)
 
-    if request.method == 'POST':  # Here we fixed the attribute name to be all lowercase
+    if request.method == 'POST': 
         new_task = request.POST["task"]
         get_task.task = new_task
         get_task.save()
